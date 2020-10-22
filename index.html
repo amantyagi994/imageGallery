@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Image Gallery</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="dp-flex align-center justify-center">
+		<div class="projectContainer dp-flex">
+			<div class="project project1 dp-flex justify-center align-center">
+				<h2 class="projectTitle">Huddle landing Page</h2>
+				<p class="projectDescription">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nihil
+					incidunt qui dicta possimus dolorem quibusdam, quasi non vel facere
+					voluptatibus natus sunt dolores, culpa soluta aut reiciendis numquam
+					officiis?
+				</p>
+				<div class="projectLinks">
+					<a href="" class="projectLink">view live</a>
+					<a href="" class="projectLink">repository</a>
+				</div>
+			</div>
+			<div class="project project2 dp-flex align-center justify-center">
+				<h2 class="projectTitle">Huddle landing Page</h2>
+				<p class="projectDescription">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nihil
+					incidunt qui dicta possimus dolorem quibusdam, quasi non vel facere
+					voluptatibus natus sunt dolores, culpa soluta aut reiciendis numquam
+					officiis?
+				</p>
+				<div class="projectLinks">
+					<a href="" class="projectLink">view live</a>
+					<a href="" class="projectLink">repository</a>
+				</div>
+			</div>
+			<div class="project project3 dp-flex align-center justify-center">
+				<h2 class="projectTitle">Huddle landing Page</h2>
+				<p class="projectDescription">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nihil
+					incidunt qui dicta possimus dolorem quibusdam, quasi non vel facere
+					voluptatibus natus sunt dolores, culpa soluta aut reiciendis numquam
+					officiis?
+				</p>
+				<div class="projectLinks">
+					<a href="" class="projectLink">view live</a>
+					<a href="" class="projectLink">repository</a>
+				</div>
+			</div>
+			<div class="project project4 dp-flex justify-center align-center">
+				<h2 class="projectTitle">Huddle landing Page</h2>
+				<p class="projectDescription">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam nihil
+					incidunt qui dicta possimus dolorem quibusdam, quasi non vel facere
+					voluptatibus natus sunt dolores, culpa soluta aut reiciendis numquam
+					officiis?
+				</p>
+				<div class="projectLinks">
+					<a href="" class="projectLink">view live</a>
+					<a href="" class="projectLink">repository</a>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const projects = document.querySelectorAll(".project");
+
+			function openProject() {
+				if (
+					this.parentElement.querySelector(".open") &&
+					this.parentElement.querySelector(".open") !== this
+				) {
+					this.parentElement.querySelector(".open").classList.toggle("open");
+				}
+				this.classList.contains("open")
+					? this.classList.remove("open")
+					: this.classList.add("open");
+				// }
+
+				// function moveInDetails(e) {
+				if (this.parentElement.querySelector(".active")) {
+					this.parentElement
+						.querySelector(".active")
+						.classList.remove("active");
+				}
+				this.classList.toggle("active");
+			}
+
+			projects.forEach(project =>
+				project.addEventListener("click", openProject)
+			);
+			// projects.forEach(project =>
+			// 	project.addEventListener("click", moveInDetails)
+			// );
+		</script>
+	</body>
+</html>

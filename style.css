@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap");
+
+:root {
+	--gradient-golden: linear-gradient(175deg, #e1cd87, #ca9d4b);
+	--gradient-dark: linear-gradient(150deg, #111111, #000000);
+	--gradient-black: linear-gradient(150deg, #222222, #000000);
+	--gold: #666666;
+	--text-gold: #fdbc53;
+	--light: #fefefe;
+	--semi-dark: #999999;
+	--black: #111111;
+	--primary-color: #1e41b480;
+	--overlay-color: #1e9eb4d0;
+	--ham-speed: 0.75s;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--black);
+	border-left: 1px solid var(--gold);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--gradient-golden);
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--gold);
+}
+
+*,
+*:before,
+*:after {
+	-webkit-tap-highlight-color: transparent;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	min-height: 100vh;
+	width: 100%;
+	line-height: 1.5;
+	font-family: "Comfortaa", cursive;
+	color: var(--text);
+	color: #000000;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.dp-flex {
+	display: flex;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.basic-transition {
+	transition: 0.4s ease;
+}
+
+/* .self-center {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+} */
+
+.projectContainer {
+	width: 50rem;
+	height: 90vh;
+	flex-direction: column;
+}
+
+.project {
+	position: relative;
+	font-size: 0.8rem;
+	width: 100%;
+  flex-direction: column;
+  background: #000000aa;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	flex: 1;
+	transition: all 0.7s cubic-bezier(0.57, -0.34, 0.4, 1.51);
+	overflow: hidden;
+	cursor: pointer;
+	font-weight: bolder;
+}
+
+.project1 {
+	background-image: url("./images/huddleSmall.png");
+}
+
+.project2 {
+	background-image: url("./images/introComponent.png");
+}
+
+.project3 {
+	background-image: url("./images/testimonial.png");
+}
+
+.project4 {
+	background-image: url("./images/baseApperal.png");
+}
+
+.project > * {
+	margin: 0;
+	width: 100%;
+	transition: transform 0.5s cubic-bezier(0.57, -0.34, 0.68, 1.15);
+	flex: 1 0 auto;
+	/* border: 1px solid red; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.project > *:nth-child(2) {
+	transform: translateY(-110%);
+}
+
+.project > *:last-child {
+	transform: translateY(110%);
+}
+
+.project .projectDescription {
+	font-size: 0.8rem;
+}
+
+.project .projectTitle {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.project.open,
+.project:hover.open {
+	font-size: 1.3rem;
+	flex: 4;
+}
+.project:hover {
+	font-size: 1rem;
+	flex: 1.5;
+}
+
+.project.open.active > *:nth-child(2),
+.project.open.active > *:last-child {
+	transform: translateY(0);
+}
